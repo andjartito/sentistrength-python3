@@ -245,10 +245,15 @@ config["exclamation"]  = True
 config["punctuation"]  = True
 senti = sentistrength(config)
 
-list1= ['dia malas dan jelek sekali tetapi lintah darat :)','Maafkan aku, aku udah bener-bener gak bisa sama kamu, aku tuh udah terlanjur mencintai dia, bahkan lebih dari cinta aku ke kamu, maaf','Aku benar-benar mencintaimu tapi tidak suka adik dingin Anda'];
+#local python
+#list1= ['dia malas dan jelek sekali tetapi lintah darat :)','Maafkan aku, aku udah bener-bener gak bisa sama kamu, aku tuh udah terlanjur mencintai dia, bahkan lebih dari cinta aku ke kamu, maaf','Aku benar-benar mencintaimu tapi tidak suka adik dingin Anda'];
 
-#read file txt
+#read file txt from local computer
 #list2=[line.strip() for line in open("E:/Sentistrength/program/DATA/datatweet.txt", 'r')];
 
-for p in list1: print(senti.main(p))
+#read file csv from google colab
+list3=[line.strip() for line in open("data_prepocessing.csv", 'r')];
+
+
+for p in list3: print(senti.main(p))
 
