@@ -252,7 +252,7 @@ senti = sentistrength(config)
 #list2=[line.strip() for line in open("E:/Sentistrength/program/DATA/datatweet.txt", 'r')];
 
 #read file csv from google colab
-list3=[line.strip() for line in open("data_prepocessing.csv", 'r')];
+list3=[line.strip() for line in open("/content/data_prepocessing.csv", 'r')];
 
 
 for p in list3: print(senti.main(p))
